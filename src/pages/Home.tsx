@@ -18,22 +18,22 @@ const Home: FC = () => {
   const menu = useMemo(() => {
     return [
       {
-        path: '/home',
+        path: '/chenxi-blog/home',
         name: '主页',
         component: lazy(() => import('./Knowledge'))
       },
       {
-        path: '/knowledge',
+        path: '/chenxi-blog/knowledge',
         name: '学习笔记',
         component: lazy(() => import('./Knowledge'))
       },
       {
-        path: '/share',
+        path: '/chenxi-blog/share',
         name: '分享',
         component: lazy(() => import('./Resume'))
       },
       {
-        path: '/resume',
+        path: '/chenxi-blog/resume',
         name: '简历',
         component: lazy(() => import('./Resume'))
       }
@@ -78,7 +78,7 @@ const Home: FC = () => {
                 />
               );
             })}
-            <Redirect from="/" to="/home" />
+            <Redirect from="/" to="/chenxi-blog/home" />
           </Switch>
         </div>
       </Suspense>

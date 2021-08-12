@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
+import legacy from '@vitejs/plugin-legacy';
 import vitePluginImp from 'vite-plugin-imp';
 import path from 'path';
 import ip from 'ip';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base:'/chenxi-blog/',
+  base:'/vite-react-app/',
   plugins: [
     reactRefresh(),
     vitePluginImp({
@@ -16,7 +16,12 @@ export default defineConfig({
         style: (name) => `antd/lib/${name}/style/index.less`,
       },
     ],
-  })],
+  }),
+  legacy({
+    targets: ['ie >= 11'],
+    additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+  })
+],
   server: {
     host: ip.address(),
     port: 3001,

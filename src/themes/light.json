@@ -1,9 +1,0 @@
-{
-
-    "--font-family-base": "averta_stdregular,Helvetica Neue,Helvetica",
-    "--c-divider-light": "rgba(60, 60, 67, .12)",
-    "--c-bg": "#fafafa",
-    "--c-text": "#606f7b",
-    "--c-divider": "rgba(60, 60, 67, .12)",
-    "--primary-color": "#08b9bb"
-}

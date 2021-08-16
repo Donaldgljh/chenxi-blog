@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Animation from '../Animation';
-import loader from '@/assets/loader.json';
+import loader from '@/assets/lottie/loader.json';
 import './index.less';
 
 const CenteredSpin: FC = () => {

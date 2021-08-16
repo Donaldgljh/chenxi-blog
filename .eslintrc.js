@@ -1,37 +1,63 @@
-import { defineConfig } from 'eslint-define-config';
-
-export default defineConfig({
+module.exports = {
+  root: true, //最终配置文件，不再向上寻找
+  parser: '@typescript-eslint/parser', //ts解析器
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    less: 'writable',
+    ENV: true
+  },
   extends: [
-    'eslint:recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended'
   ],
-  parser: '@typescript-eslint/parser',
+  plugins: ['react', 'react-hooks', 'prettier'],
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect'
+    }
+  },
+  env: {
+    browser: true,
+    node: true,
+    es6: true
+  },
   parserOptions: {
+    //指定ESLint可以解析JSX语法
+    ecmaVersion: 2019,
     sourceType: 'module',
-    ecmaVersion: 2020
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   rules: {
-    'no-debugger': ['error'],
-    'no-empty': ['warn', { allowEmptyCatch: true }],
-    'no-process-exit': 'off',
-    'no-useless-escape': 'off',
-    'prefer-const': [
+    'no-unused-vars': 'off',
+    'no-cond-assign': 'error',
+    'no-debugger': 'warn',
+    'no-dupe-args': 'error',
+    'no-caller': 'error',
+    'no-unmodified-loop-condition': 'error',
+    'no-with': 'error',
+    'no-catch-shadow': 'error',
+
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    'prettier/prettier': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': [
       'warn',
       {
-        destructuring: 'all'
+        additionalHooks: 'useRecoilCallback'
       }
-    ],
-    '@typescript-eslint/ban-ts-comment': 'off', // TODO: we should turn this on in a new PR
-    '@typescript-eslint/ban-types': 'off', // TODO: we should turn this on in a new PR
-    '@typescript-eslint/no-empty-function': [
-      'error',
-      { allow: ['arrowFunctions'] }
-    ],
-    '@typescript-eslint/no-explicit-any': 'off', // maybe we should turn this on in a new PR
-    '@typescript-eslint/no-extra-semi': 'off', // conflicts with prettier
-    '@typescript-eslint/no-inferrable-types': 'off',
-    '@typescript-eslint/no-non-null-assertion': 'off', // maybe we should turn this on in a new PR
-    '@typescript-eslint/no-unused-vars': 'off', // maybe we should turn this on in a new PR
-    '@typescript-eslint/no-var-requires': 'off'
-  },
-})
+    ]
+  }
+};

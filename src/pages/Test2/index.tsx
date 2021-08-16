@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import CenteredSpin from '@/components/CenteredSpin';
 
-const Knowledge: FC = () => {
+const Test2: FC = () => {
   return <CenteredSpin />;
 };
 
-export default Knowledge;
+export default Test2;

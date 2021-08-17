@@ -42,6 +42,6 @@ export const menus: IMenusProps[] = [
     title: t('Chart'),
     key: 'chart',
     icon: <BarChartOutlined />,
-    component: lazy(() => import('@/pages/Excel'))
+    component: lazy(() => import('@/pages/Chart'))
   }
 ];

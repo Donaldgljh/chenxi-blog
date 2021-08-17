@@ -14,10 +14,15 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.172",
+    "@types/nprogress": "^0.2.0",
+    "ahooks": "^2.10.9",
     "antd": "^4.16.6",
+    "axios": "^0.21.1",
     "echarts": "^5.1.2",
     "lodash": "^4.17.21",
     "lottie-web-react": "^1.0.3",
+    "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
     "react": "^17.0.0",
     "react-document-title": "^2.0.3",
     "react-dom": "^17.0.0",
@@ -26,6 +31,7 @@
     "xlsx": "^0.17.0"
   },
   "devDependencies": {
+    "@types/mockjs": "^1.0.4",
     "@types/node": "^15.12.5",
     "@types/papaparse": "^5.2.6",
     "@types/react": "^17.0.0",

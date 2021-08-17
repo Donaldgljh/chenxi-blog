@@ -66,7 +66,7 @@ const Chart: FC = () => {
             type: 'category',
             boundaryGap: true,
             data: (function () {
-              let now = new Date();
+              let now: any = new Date();
               const res = [];
               let len = 10;
               while (len--) {
@@ -129,7 +129,7 @@ const Chart: FC = () => {
               const res = [];
               let len = 0;
               while (len < 10) {
-                res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                res.push(Math.random() * 10 + 5 - 0);
                 len++;
               }
               return res;
@@ -147,7 +147,7 @@ const Chart: FC = () => {
         data0.shift();
         data0.push(Math.round(Math.random() * 1000));
         data1.shift();
-        data1.push((Math.random() * 10 + 5).toFixed(1) - 0);
+        data1.push(Math.random() * 10 + 5 - 0);
 
         option.xAxis[0].data.shift();
         option.xAxis[0].data.push(axisData);

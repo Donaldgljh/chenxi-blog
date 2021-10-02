@@ -42,6 +42,7 @@ const SideBar: FC<SideBarProps> = (props) => {
     >
       <div className="logo" onClick={goHome}>
         <Animation animationData={dolphin as any} className="icon" />
+        {!collapsed && <h1>ChenXi</h1>}
       </div>
       <Menu mode="inline" theme="dark" selectedKeys={selectedKeys}>
         {menus.map((menu) => {

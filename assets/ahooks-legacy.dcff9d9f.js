@@ -1,0 +1,1 @@
+System.register(["./react-legacy.0e757699.js","./resize-observer-polyfill-legacy.ece26034.js","./lodash.throttle-legacy.7ad5f0af.js","./lodash.debounce-legacy.423d1dd4.js","./@ahooksjs-legacy.fd871666.js"],(function(){"use strict";return{setters:[function(){},function(){},function(){},function(){},function(){}],execute:function(){}}}));

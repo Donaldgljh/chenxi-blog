@@ -24,21 +24,21 @@ export const t = (text: string) => {
 
 export const menus: IMenusProps[] = [
   {
-    path: '/vite-react-app/dashboard',
+    path: '/dashboard',
     title: t('Dashboard'),
     key: 'dashboard',
     icon: <DashboardOutlined />,
     component: lazy(() => import('@/pages/Dashboard'))
   },
   {
-    path: '/vite-react-app/excel',
+    path: '/excel',
     title: t('Excel'),
     key: 'excel',
     icon: <FileExcelOutlined />,
     component: lazy(() => import('@/pages/Excel'))
   },
   {
-    path: '/vite-react-app/chart',
+    path: '/chart',
     title: t('Chart'),
     key: 'chart',
     icon: <BarChartOutlined />,

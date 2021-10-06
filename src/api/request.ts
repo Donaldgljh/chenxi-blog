@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { message } from 'antd';
 
-const service = axios.create({
-  baseURL: '',
+const request = axios.create({
+  baseURL: '/api',
   timeout: 500
 });
 
-service.interceptors.request.use(
+request.interceptors.request.use(
   (config) => {
     return config;
   },
@@ -16,10 +16,10 @@ service.interceptors.request.use(
   }
 );
 
-service.interceptors.response.use(
+request.interceptors.response.use(
   (response) => {
-    const res = response.data;
-    if (res.code !== 200) {
+    const res = response.data as any;
+    if (res.code !== '200') {
       message.error(res.message);
     } else {
       return res;
@@ -31,4 +31,4 @@ service.interceptors.response.use(
   }
 );
 
-export default service;
+export default request;

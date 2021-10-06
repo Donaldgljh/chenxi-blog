@@ -42,8 +42,17 @@ const ExcelReader: FC<ExcelReaderProps> = (props) => {
       else reader.readAsArrayBuffer(file);
       return false;
     },
+    action: '/api/upload/uploadExcel',
     maxCount: 1,
-    showUploadList: false
+    showUploadList: false,
+    progress: {
+      strokeColor: {
+        '0%': '#108ee9',
+        '100%': '#87d068'
+      },
+      strokeWidth: 3,
+      format: (percent: any) => `${parseFloat(percent.toFixed(2))}%`
+    }
   };
 
   return (

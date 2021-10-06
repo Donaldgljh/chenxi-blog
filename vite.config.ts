@@ -6,7 +6,6 @@ import path from 'path';
 import ip from 'ip';
 
 export default defineConfig({
-  base: '/vite-react-app/',
   plugins: [
     reactRefresh(),
     vitePluginImp({
@@ -25,7 +24,14 @@ export default defineConfig({
   server: {
     host: ip.address(),
     port: 9000,
-    open: true
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   },
   css: {
     preprocessorOptions: {

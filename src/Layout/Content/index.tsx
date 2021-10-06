@@ -1,6 +1,5 @@
 import React, { FC, Suspense, useEffect } from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
-import CenteredSpin from '@/components/CenteredSpin';
 import { Layout } from 'antd';
 import { IMenusProps } from '../menu';
 import NProgress from 'nprogress';
@@ -41,7 +40,7 @@ const AppContent: FC<AppContentProps> = (props) => {
               />
             );
           })}
-          <Redirect from="/" to="/vite-react-app/dashboard" />
+          <Redirect from="/" to="/dashboard" />
         </Suspense>
       </Switch>
     </Content>

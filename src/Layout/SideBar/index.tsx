@@ -26,7 +26,7 @@ const SideBar: FC<SideBarProps> = (props) => {
   }, [location.pathname, menus]);
 
   const goHome = () => {
-    history.push('/vite-react-app/dashboard');
+    history.push('/dashboard');
   };
 
   const goPath = (path: string) => {

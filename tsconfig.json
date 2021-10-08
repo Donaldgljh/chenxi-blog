@@ -17,7 +17,14 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@/*":["src/*"]
+      "cxApi/*":["src/api/*"],
+      "cxAsset/*":["src/assets/*"],
+      "cxComponent/*":["src/components/*"],
+      "cxLayout/*":["src/layouts/*"],
+      "cxLocale/*":["src/locales/*"],
+      "cxPage/*":["src/pages/*"],
+      "cxUtil/*":["src/utils/*"],
+      "~":[""]
     }
   },
   "include": ["src"],

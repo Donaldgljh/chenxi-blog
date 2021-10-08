@@ -1,6 +1,6 @@
 import React, { FC, memo, useEffect } from 'react';
 import Overview from './Overview';
-import { createUser } from '@/api/upload';
+import { createUser } from 'cxApi/upload';
 import { useRequest } from 'ahooks';
 
 const Dashboard: FC = () => {

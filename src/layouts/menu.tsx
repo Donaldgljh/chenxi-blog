@@ -28,20 +28,20 @@ export const menus: IMenusProps[] = [
     title: t('Dashboard'),
     key: 'dashboard',
     icon: <DashboardOutlined />,
-    component: lazy(() => import('@/pages/Dashboard'))
+    component: lazy(() => import('cxPage/Dashboard'))
   },
   {
     path: '/excel',
     title: t('Excel'),
     key: 'excel',
     icon: <FileExcelOutlined />,
-    component: lazy(() => import('@/pages/Excel'))
+    component: lazy(() => import('cxPage/Excel'))
   },
   {
     path: '/chart',
     title: t('Chart'),
     key: 'chart',
     icon: <BarChartOutlined />,
-    component: lazy(() => import('@/pages/Chart'))
+    component: lazy(() => import('cxPage/Chart'))
   }
 ];

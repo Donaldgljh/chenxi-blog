@@ -13,6 +13,7 @@
     "gen-trans": "i18next -c i18next-parser.config.js"
   },
   "dependencies": {
+    "@ant-design/pro-layout": "^6.26.2",
     "@types/lodash": "^4.14.172",
     "@types/nprogress": "^0.2.0",
     "ahooks": "^2.10.9",

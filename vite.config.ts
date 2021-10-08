@@ -45,9 +45,31 @@ export default defineConfig({
     }
   },
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src')
-    },
+    alias: [
+      { find: /^~/, replacement: '' },
+      { find: /^cxApi/, replacement: path.resolve(__dirname, 'src/api') },
+      { find: /^cxAsset/, replacement: path.resolve(__dirname, 'src/assets') },
+      {
+        find: /^cxComponent/,
+        replacement: path.resolve(__dirname, 'src/components')
+      },
+      {
+        find: /^cxLayout/,
+        replacement: path.resolve(__dirname, 'src/layouts')
+      },
+      {
+        find: /^cxLocale/,
+        replacement: path.resolve(__dirname, 'src/locales')
+      },
+      {
+        find: /^cxPage/,
+        replacement: path.resolve(__dirname, 'src/pages')
+      },
+      {
+        find: /^cxUtil/,
+        replacement: path.resolve(__dirname, 'src/utils')
+      }
+    ],
     extensions: ['.tsx', '.ts', '.js', '.jsx', '.json']
   },
   build: {

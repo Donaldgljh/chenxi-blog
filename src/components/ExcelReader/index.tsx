@@ -17,31 +17,31 @@ const ExcelReader: FC<ExcelReaderProps> = (props) => {
   const { onUpload, extendClassName } = props;
   const { t } = useTranslation('app');
   const UploadProps = {
-    beforeUpload: (file: RcFile) => {
-      if (!file.type.includes('sheet')) {
-        message.error('只接受Excel文件');
-        return;
-      }
-      const reader = new FileReader();
-      const rABS = !!reader.readAsBinaryString;
-      reader.onload = (e) => {
-        if (e.target && e.target.result) {
-          /* Parse data */
-          const bstr = e.target.result;
-          const wb = XLSX.read(bstr, { type: rABS ? 'binary' : 'array' });
-          /* Get first worksheet */
-          const wsname = wb.SheetNames[0];
-          const ws = wb.Sheets[wsname];
-          /* Convert array of arrays */
-          const data = XLSX.utils.sheet_to_json(ws, { header: 1 });
-          /* Update state */
-          onUpload(data as string[][]);
-        }
-      };
-      if (rABS) reader.readAsBinaryString(file);
-      else reader.readAsArrayBuffer(file);
-      return false;
-    },
+    // beforeUpload: (file: RcFile) => {
+    //   if (!file.type.includes('sheet')) {
+    //     message.error('只接受Excel文件');
+    //     return;
+    //   }
+    //   const reader = new FileReader();
+    //   const rABS = !!reader.readAsBinaryString;
+    //   reader.onload = (e) => {
+    //     if (e.target && e.target.result) {
+    //       /* Parse data */
+    //       const bstr = e.target.result;
+    //       const wb = XLSX.read(bstr, { type: rABS ? 'binary' : 'array' });
+    //       /* Get first worksheet */
+    //       const wsname = wb.SheetNames[0];
+    //       const ws = wb.Sheets[wsname];
+    //       /* Convert array of arrays */
+    //       const data = XLSX.utils.sheet_to_json(ws, { header: 1 });
+    //       /* Update state */
+    //       onUpload(data as string[][]);
+    //     }
+    //   };
+    //   if (rABS) reader.readAsBinaryString(file);
+    //   else reader.readAsArrayBuffer(file);
+    //   return false;
+    // },
     action: '/api/upload/uploadExcel',
     maxCount: 1,
     showUploadList: false,

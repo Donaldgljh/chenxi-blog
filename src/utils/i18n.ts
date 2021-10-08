@@ -1,7 +1,7 @@
 import LanguageDetector from 'i18next-browser-languagedetector';
 import i18n from 'i18next';
-import enUsTrans from '@/locales/en/app.json';
-import zhCnTrans from '@/locales/zh/app.json';
+import enUsTrans from 'cxLocale/en/app.json';
+import zhCnTrans from 'cxLocale/zh/app.json';
 import { initReactI18next } from 'react-i18next';
 
 i18n

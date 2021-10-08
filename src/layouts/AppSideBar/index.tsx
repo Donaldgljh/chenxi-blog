@@ -1,7 +1,7 @@
 import React, { FC, useMemo } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import Animation from '@/components/Animation';
-import dolphin from '@/assets/lottie/dolphin.json';
+import Animation from 'cxComponent/Animation';
+import dolphin from 'cxAsset/lottie/dolphin.json';
 import { Menu, Layout } from 'antd';
 import { IMenusProps } from '../menu';
 import 'antd/es/tooltip/style';

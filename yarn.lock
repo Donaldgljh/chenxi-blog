@@ -22,6 +22,22 @@
   resolved "https://registry.npm.taobao.org/@ant-design/icons-svg/download/@ant-design/icons-svg-4.1.0.tgz#480b025f4b20ef7fe8f47d4a4846e4fee84ea06c"
   integrity sha1-SAsCX0sg73/o9H1KSEbk/uhOoGw=
 
+"@ant-design/icons-svg@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.npmmirror.com/@ant-design/icons-svg/download/@ant-design/icons-svg-4.2.1.tgz#8630da8eb4471a4aabdaed7d1ff6a97dcb2cf05a"
+  integrity sha1-hjDajrRHGkqr2u19H/apfcss8Fo=
+
+"@ant-design/icons@^4.0.0", "@ant-design/icons@^4.3.0":
+  version "4.7.0"
+  resolved "https://registry.npmmirror.com/@ant-design/icons/download/@ant-design/icons-4.7.0.tgz?cache=0&sync_timestamp=1632478665145&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40ant-design%2Ficons%2Fdownload%2F%40ant-design%2Ficons-4.7.0.tgz#8c3cbe0a556ba92af5dc7d1e70c0b25b5179af0f"
+  integrity sha1-jDy+ClVrqSr13H0ecMCyW1F5rw8=
+  dependencies:
+    "@ant-design/colors" "^6.0.0"
+    "@ant-design/icons-svg" "^4.2.1"
+    "@babel/runtime" "^7.11.2"
+    classnames "^2.2.6"
+    rc-util "^5.9.4"
+
 "@ant-design/icons@^4.6.2":
   version "4.6.2"
   resolved "https://registry.npm.taobao.org/@ant-design/icons/download/@ant-design/icons-4.6.2.tgz?cache=0&sync_timestamp=1616135567365&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40ant-design%2Ficons%2Fdownload%2F%40ant-design%2Ficons-4.6.2.tgz#290f2e8cde505ab081fda63e511e82d3c48be982"
@@ -32,6 +48,49 @@
     "@babel/runtime" "^7.11.2"
     classnames "^2.2.6"
     rc-util "^5.9.4"
+
+"@ant-design/pro-layout@^6.26.2":
+  version "6.26.2"
+  resolved "https://registry.npmmirror.com/@ant-design/pro-layout/download/@ant-design/pro-layout-6.26.2.tgz?cache=0&sync_timestamp=1633678106125&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40ant-design%2Fpro-layout%2Fdownload%2F%40ant-design%2Fpro-layout-6.26.2.tgz#4b74ba82e97a65ce7419834f57db8c1fbd1bcd34"
+  integrity sha1-S3S6gul6Zc50GYNPV9uMH70bzTQ=
+  dependencies:
+    "@ant-design/icons" "^4.0.0"
+    "@ant-design/pro-provider" "1.4.19"
+    "@ant-design/pro-utils" "1.24.7"
+    "@umijs/route-utils" "^1.0.35"
+    "@umijs/use-params" "^1.0.2"
+    classnames "^2.2.6"
+    lodash.merge "^4.6.2"
+    omit.js "^2.0.2"
+    path-to-regexp "2.4.0"
+    rc-resize-observer "^0.2.1"
+    rc-util "^5.0.6"
+    swr "^1.1.0-beta.0"
+    unstated-next "^1.1.0"
+    use-json-comparison "^1.0.3"
+    use-media-antd-query "^1.0.6"
+    warning "^4.0.3"
+
+"@ant-design/pro-provider@1.4.19":
+  version "1.4.19"
+  resolved "https://registry.npmmirror.com/@ant-design/pro-provider/download/@ant-design/pro-provider-1.4.19.tgz?cache=0&sync_timestamp=1632450330402&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40ant-design%2Fpro-provider%2Fdownload%2F%40ant-design%2Fpro-provider-1.4.19.tgz#d0b1815d2db0c16556a2528ca88b372b5e2ff46b"
+  integrity sha1-0LGBXS2wwWVWolKMqIs3K14v9Gs=
+  dependencies:
+    rc-util "^5.0.1"
+
+"@ant-design/pro-utils@1.24.7":
+  version "1.24.7"
+  resolved "https://registry.npmmirror.com/@ant-design/pro-utils/download/@ant-design/pro-utils-1.24.7.tgz?cache=0&sync_timestamp=1633678117065&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40ant-design%2Fpro-utils%2Fdownload%2F%40ant-design%2Fpro-utils-1.24.7.tgz#db4ca35d2294df53e1b4f2b4eb33110f874e7bab"
+  integrity sha1-20yjXSKU31PhtPK06zMRD4dOe6s=
+  dependencies:
+    "@ant-design/icons" "^4.3.0"
+    "@ant-design/pro-provider" "1.4.19"
+    classnames "^2.2.6"
+    lodash.merge "^4.6.2"
+    moment "^2.27.0"
+    rc-util "^5.0.6"
+    react-sortable-hoc "^2.0.0"
+    swr "^1.1.0-beta.0"
 
 "@ant-design/react-slick@~0.28.1":
   version "0.28.3"
@@ -251,6 +310,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.2.0":
+  version "7.15.4"
+  resolved "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz?cache=0&sync_timestamp=1630618841844&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
+  integrity sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.14.8":
   version "7.14.9"
   resolved "https://registry.nlark.com/@babel/standalone/download/@babel/standalone-7.14.9.tgz#b9a6fa913271a153ca232fdd0f2aa5e3c951d9d5"
@@ -342,6 +408,11 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@qixian.cs/path-to-regexp@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.npm.taobao.org/@qixian.cs/path-to-regexp/download/@qixian.cs/path-to-regexp-6.1.0.tgz#6b84ad01596332aba95fa29d2e70104698cd5c45"
+  integrity sha1-a4StAVljMqupX6KdLnAQRpjNXEU=
 
 "@rollup/pluginutils@^4.1.0":
   version "4.1.0"
@@ -531,6 +602,21 @@
   dependencies:
     "@typescript-eslint/types" "4.28.1"
     eslint-visitor-keys "^2.0.0"
+
+"@umijs/route-utils@^1.0.35":
+  version "1.0.37"
+  resolved "https://registry.npm.taobao.org/@umijs/route-utils/download/@umijs/route-utils-1.0.37.tgz#1ceb516980d4754ce2d5959878fe72259091a990"
+  integrity sha1-HOtRaYDUdUzi1ZWYeP5yJZCRqZA=
+  dependencies:
+    "@qixian.cs/path-to-regexp" "^6.1.0"
+    fast-deep-equal "^3.1.3"
+    lodash.isequal "^4.5.0"
+    memoize-one "^5.1.1"
+
+"@umijs/use-params@^1.0.2":
+  version "1.0.6"
+  resolved "https://registry.nlark.com/@umijs/use-params/download/@umijs/use-params-1.0.6.tgz#c5b33725c88ae831c86c16edb9de2df7cfd65707"
+  integrity sha1-xbM3JciK6DHIbBbtud4t98/WVwc=
 
 "@vitejs/plugin-legacy@^1.5.0":
   version "1.5.0"
@@ -2124,6 +2210,13 @@ intersection-observer@^0.7.0:
   resolved "https://registry.npm.taobao.org/intersection-observer/download/intersection-observer-0.7.0.tgz#ee16bee978db53516ead2f0a8154b09b400bbdc9"
   integrity sha1-7ha+6XjbU1FurS8KgVSwm0ALvck=
 
+invariant@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.nlark.com/invariant/download/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
+  integrity sha1-YQ88ksk1nOHbYW5TgAjSP/NRWOY=
+  dependencies:
+    loose-envify "^1.0.0"
+
 ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.nlark.com/ip/download/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
@@ -2553,6 +2646,11 @@ matcher-collection@^2.0.0:
     "@types/minimatch" "^3.0.3"
     minimatch "^3.0.2"
 
+memoize-one@^5.1.1:
+  version "5.2.1"
+  resolved "https://registry.nlark.com/memoize-one/download/memoize-one-5.2.1.tgz?cache=0&sync_timestamp=1619230052606&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmemoize-one%2Fdownload%2Fmemoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
+  integrity sha1-gzeqPEM1WBg57AHD1ZQJDOvo8A4=
+
 merge2@^1.3.0:
   version "1.4.1"
   resolved "https://registry.npm.taobao.org/merge2/download/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
@@ -2608,7 +2706,7 @@ modern-normalize@^1.1.0:
   resolved "https://registry.nlark.com/modern-normalize/download/modern-normalize-1.1.0.tgz?cache=0&sync_timestamp=1619951149003&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmodern-normalize%2Fdownload%2Fmodern-normalize-1.1.0.tgz#da8e80140d9221426bd4f725c6e11283d34f90b7"
   integrity sha1-2o6AFA2SIUJr1PclxuESg9NPkLc=
 
-moment@^2.24.0, moment@^2.25.3:
+moment@^2.24.0, moment@^2.25.3, moment@^2.27.0:
   version "2.29.1"
   resolved "https://registry.npm.taobao.org/moment/download/moment-2.29.1.tgz?cache=0&sync_timestamp=1601983320283&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmoment%2Fdownload%2Fmoment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha1-sr52n6MZQL6e7qZGnAdeNQBvo9M=
@@ -2761,6 +2859,11 @@ object.values@^1.1.4:
     define-properties "^1.1.3"
     es-abstract "^1.18.2"
 
+omit.js@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.nlark.com/omit.js/download/omit.js-2.0.2.tgz#dd9b8436fab947a5f3ff214cb2538631e313ec2f"
+  integrity sha1-3ZuENvq5R6Xz/yFMslOGMeMT7C8=
+
 once@^1.3.0, once@^1.3.1, once@^1.3.2, once@^1.4.0:
   version "1.4.0"
   resolved "https://registry.nlark.com/once/download/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -2853,6 +2956,11 @@ path-posix@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/path-posix/download/path-posix-1.0.0.tgz#06b26113f56beab042545a23bfa88003ccac260f"
   integrity sha1-BrJhE/Vr6rBCVFojv6iAA8ysJg8=
+
+path-to-regexp@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npm.taobao.org/path-to-regexp/download/path-to-regexp-2.4.0.tgz#35ce7f333d5616f1c1e1bfe266c3aba2e5b2e704"
+  integrity sha1-Nc5/Mz1WFvHB4b/iZsOrouWy5wQ=
 
 path-to-regexp@^1.7.0:
   version "1.8.0"
@@ -2997,7 +3105,7 @@ promise-map-series@^0.3.0:
   resolved "https://registry.npm.taobao.org/promise-map-series/download/promise-map-series-0.3.0.tgz#41873ca3652bb7a042b387d538552da9b576f8a1"
   integrity sha1-QYc8o2Urt6BCs4fVOFUtqbV2+KE=
 
-prop-types@^15.5.6, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.6, prop-types@^15.5.7, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -3252,6 +3360,16 @@ rc-rate@~2.9.0:
     classnames "^2.2.5"
     rc-util "^5.0.1"
 
+rc-resize-observer@^0.2.1:
+  version "0.2.6"
+  resolved "https://registry.nlark.com/rc-resize-observer/download/rc-resize-observer-0.2.6.tgz?cache=0&sync_timestamp=1630563912050&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frc-resize-observer%2Fdownload%2Frc-resize-observer-0.2.6.tgz#c1b642f6d1293e34c4e3715f47f69443a167b825"
+  integrity sha1-wbZC9tEpPjTE43FfR/aUQ6FnuCU=
+  dependencies:
+    "@babel/runtime" "^7.10.1"
+    classnames "^2.2.1"
+    rc-util "^5.0.0"
+    resize-observer-polyfill "^1.5.1"
+
 rc-resize-observer@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/rc-resize-observer/download/rc-resize-observer-1.0.0.tgz?cache=0&sync_timestamp=1608864849776&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frc-resize-observer%2Fdownload%2Frc-resize-observer-1.0.0.tgz#97fb89856f62fec32ab6e40933935cf58e2e102d"
@@ -3475,6 +3593,15 @@ react-side-effect@^1.0.2:
   integrity sha1-DpQMePq6DHO5sOupzT3ajft+fa4=
   dependencies:
     shallowequal "^1.0.1"
+
+react-sortable-hoc@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/react-sortable-hoc/download/react-sortable-hoc-2.0.0.tgz?cache=0&sync_timestamp=1616123350417&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-sortable-hoc%2Fdownload%2Freact-sortable-hoc-2.0.0.tgz#f6780d8aa4b922a21f3e754af542f032677078b7"
+  integrity sha1-9ngNiqS5IqIfPnVK9ULwMmdweLc=
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    invariant "^2.2.4"
+    prop-types "^15.5.7"
 
 react@^17.0.0:
   version "17.0.2"
@@ -3913,6 +4040,11 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
+swr@^1.1.0-beta.0:
+  version "1.1.0-beta.4"
+  resolved "https://registry.npmmirror.com/swr/download/swr-1.1.0-beta.4.tgz?cache=0&sync_timestamp=1633243101991&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fswr%2Fdownload%2Fswr-1.1.0-beta.4.tgz#32424d24b76aa30bff84f71795cbfec55404b4e2"
+  integrity sha1-MkJNJLdqowv/hPcXlcv+xVQEtOI=
+
 symlink-or-copy@^1.1.8, symlink-or-copy@^1.2.0, symlink-or-copy@^1.3.1:
   version "1.3.1"
   resolved "https://registry.npm.taobao.org/symlink-or-copy/download/symlink-or-copy-1.3.1.tgz#9506dd64d8e98fa21dcbf4018d1eab23e77f71fe"
@@ -4134,12 +4266,27 @@ universalify@^2.0.0:
   resolved "https://registry.nlark.com/universalify/download/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha1-daSYTv7cSwiXXFrrc/Uw0C3yVxc=
 
+unstated-next@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/unstated-next/download/unstated-next-1.1.0.tgz#7bb4911a12fdf3cc8ad3eb11a0b315e4a8685ea8"
+  integrity sha1-e7SRGhL988yK0+sRoLMV5KhoXqg=
+
 uri-js@^4.2.2:
   version "4.4.1"
   resolved "https://registry.npm.taobao.org/uri-js/download/uri-js-4.4.1.tgz?cache=0&sync_timestamp=1610237517218&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Furi-js%2Fdownload%2Furi-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
   integrity sha1-mxpSWVIlhZ5V9mnZKPiMbFfyp34=
   dependencies:
     punycode "^2.1.0"
+
+use-json-comparison@^1.0.3:
+  version "1.0.6"
+  resolved "https://registry.nlark.com/use-json-comparison/download/use-json-comparison-1.0.6.tgz?cache=0&sync_timestamp=1622793910429&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fuse-json-comparison%2Fdownload%2Fuse-json-comparison-1.0.6.tgz#a012bbc258ce745db1f56745dc653f575226cb21"
+  integrity sha1-oBK7wljOdF2x9WdF3GU/V1ImyyE=
+
+use-media-antd-query@^1.0.6:
+  version "1.1.0"
+  resolved "https://registry.nlark.com/use-media-antd-query/download/use-media-antd-query-1.1.0.tgz#f083ad7e292c1c0261b6bbfaac0edc3e0920d85d"
+  integrity sha1-8IOtfiksHAJhtrv6rA7cPgkg2F0=
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

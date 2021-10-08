@@ -1,15 +1,15 @@
 import React, { FC, useState, useMemo } from 'react';
 import { Layout } from 'antd';
 import './index.less';
-import SideBar from './SideBar';
-import Header from './Header';
-import Content from './Content';
+import AppSideBar from './AppSideBar';
+import AppHeader from './AppHeader';
+import AppContent from './AppContent';
 import { menus } from './menu';
-import '@/utils/i18n';
+import 'cxUtil/i18n';
 import DocumentTitle from 'react-document-title';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { firstUpperCase } from '@/utils/index';
+import { firstUpperCase } from 'cxUtil/index';
 
 const AppLayout: FC = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -28,10 +28,10 @@ const AppLayout: FC = () => {
   return (
     <DocumentTitle title={title}>
       <Layout className="app-container">
-        <SideBar collapsed={collapsed} menus={menus} />
+        <AppSideBar collapsed={collapsed} menus={menus} />
         <Layout className="app-main">
-          <Header collapsed={collapsed} toggleCollapsed={toggleCollapsed} />
-          <Content menus={menus} />
+          <AppHeader collapsed={collapsed} toggleCollapsed={toggleCollapsed} />
+          <AppContent menus={menus} />
         </Layout>
       </Layout>
     </DocumentTitle>

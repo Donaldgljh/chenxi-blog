@@ -8,7 +8,7 @@ import {
   FullscreenExitOutlined
 } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import { toggleFullScreen } from '@/utils/index';
+import { toggleFullScreen } from 'cxUtil/index';
 
 const { Header } = Layout;
 
@@ -43,9 +43,7 @@ const AppHeader: FC<IHeaderProps> = (props) => {
     if (!document.fullscreenElement) {
       setFullScreen(false);
     } else {
-      if (document.exitFullscreen()) {
-        setFullScreen(true);
-      }
+      setFullScreen(true);
     }
   }, []);
 

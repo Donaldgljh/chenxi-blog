@@ -5,9 +5,9 @@ module.exports = {
     require('autoprefixer'),
     require('postcss-pxtorem')({
       rootValue: 16,
-      selectorBlackList: ['ant'], //过滤
-      propList: ['*'],
-      minPixelValue: 4
+      //selectorBlackList: ['ant'], //过滤
+      propList: ['*']
+      //minPixelValue: 2
     })
   ]
 };

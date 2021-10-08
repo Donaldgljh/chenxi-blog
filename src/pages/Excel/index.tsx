@@ -1,6 +1,6 @@
 import React, { FC, memo, useMemo, useState, useRef, useEffect } from 'react';
 import { Table, Space, Button, message } from 'antd';
-import ExcelReader from '@/components/ExcelReader';
+import ExcelReader from 'cxComponent/ExcelReader';
 import { useTranslation } from 'react-i18next';
 import { debounce } from 'lodash';
 import XLSX from 'xlsx';

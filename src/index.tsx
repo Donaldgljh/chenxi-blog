@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '@/pages/App';
+import Layout from 'cxLayout/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 //import '../mock';
@@ -8,7 +8,7 @@ import 'tailwindcss/tailwind.css';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <Layout />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

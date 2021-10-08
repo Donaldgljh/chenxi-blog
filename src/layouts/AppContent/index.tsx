@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import { IMenusProps } from '../menu';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
+import { WaterMark } from '@ant-design/pro-layout';
 
 NProgress.configure({ showSpinner: false });
 
@@ -16,7 +17,6 @@ interface AppContentProps {
 const LazyLoad = () => {
   useEffect(() => {
     NProgress.start();
-
     return () => {
       NProgress.done();
     };
@@ -29,20 +29,23 @@ const AppContent: FC<AppContentProps> = (props) => {
   const { menus } = props;
   return (
     <Content className="app-main-content">
-      <Switch>
-        <Suspense fallback={<LazyLoad />}>
-          {menus.map((item) => {
-            return (
-              <Route
-                path={item.path}
-                component={item.component}
-                key={item.path}
-              />
-            );
-          })}
-          <Redirect from="/" to="/dashboard" />
-        </Suspense>
-      </Switch>
+      <WaterMark content="晨曦">
+        <Switch>
+          <Suspense fallback={<LazyLoad />}>
+            {menus.map((item) => {
+              return (
+                <Route
+                  path={item.path}
+                  component={item.component}
+                  key={item.path}
+                  exact
+                />
+              );
+            })}
+          </Suspense>
+          <Redirect to="/dashboard" />
+        </Switch>
+      </WaterMark>
     </Content>
   );
 };

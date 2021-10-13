@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from 'cxLayout/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import App from 'cxComponent/Button';
 //import '../mock';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Layout />
+      <App />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

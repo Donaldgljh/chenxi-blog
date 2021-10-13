@@ -1,40 +1,61 @@
-import React, { FC, useState, useMemo } from 'react';
-import { Layout } from 'antd';
+import React, { FC, Fragment, useState } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Slide from '@mui/material/Slide';
+import HideOnScroll from 'cxComponent/HideOnScroll';
+import AppHeader from 'cxLayout/AppHeader';
+import AppContent from 'cxLayout/AppContent';
+import AppSideBar from 'cxLayout/AppSideBar';
 import './index.less';
-import AppSideBar from './AppSideBar';
-import AppHeader from './AppHeader';
-import AppContent from './AppContent';
-import { menus } from './menu';
-import 'cxUtil/i18n';
-import DocumentTitle from 'react-document-title';
-import { useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { firstUpperCase } from 'cxUtil/index';
 
 const AppLayout: FC = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  const location = useLocation();
-  const { t } = useTranslation('app');
+  const [scrollTarget, setScrollTarget] = useState<Node | Window | undefined>(
+    undefined
+  );
+  const [open, setOpen] = useState(false);
 
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
+  const handleDrawerOpen = () => {
+    setOpen(true);
   };
 
-  const title = useMemo(() => {
-    const locationArr = location.pathname.split('/');
-    return t(firstUpperCase(locationArr[locationArr.length - 1]));
-  }, [location.pathname, t]);
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
-    <DocumentTitle title={title}>
-      <Layout className="app-container">
-        <AppSideBar collapsed={collapsed} menus={menus} />
-        <Layout className="app-main">
-          <AppHeader collapsed={collapsed} toggleCollapsed={toggleCollapsed} />
-          <AppContent menus={menus} />
-        </Layout>
-      </Layout>
-    </DocumentTitle>
+    <div
+      ref={(node) => {
+        if (node) {
+          setScrollTarget(node);
+        }
+      }}
+      className="app-container"
+    >
+      <AppHeader
+        target={scrollTarget}
+        open={open}
+        handleDrawerOpen={handleDrawerOpen}
+      />
+      <AppSideBar open={open} handleDrawerClose={handleDrawerClose} />
+      <AppContent open={open} />
+      {/* <Container>
+        <Box sx={{ my: 2 }}>
+          {[...new Array(12)]
+            .map(
+              () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
+            )
+            .join('\n')}
+        </Box>
+      </Container> */}
+    </div>
   );
 };
 

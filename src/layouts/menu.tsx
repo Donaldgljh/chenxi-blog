@@ -43,5 +43,12 @@ export const menus: IMenusProps[] = [
     key: 'chart',
     icon: <BarChartOutlined />,
     component: lazy(() => import('cxPage/Chart'))
+  },
+  {
+    path: '/logistic',
+    title: t('Logistic'),
+    key: 'logistic',
+    icon: <BarChartOutlined />,
+    component: lazy(() => import('cxPage/Logistic'))
   }
 ];
